@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jesse Hirvonen — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="glow-blob" id="glowBlob"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">J3shi</div>
+    <ul>
+      <li><a href="#about">Info</a></li>
+      <li><a href="#projects">Projektit</a></li>
+      <li><a href="#contact">Yhteys</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-tag">ICT-insinööriopiskelija & Web Developer</p>
+    <h1 class="hero-name">
+      Jesse<br>
+      <span class="line2">Hirvonen</span>
+    </h1>
+    <p class="hero-desc">
+      Rakennan <strong>moderneja verkkosovelluksia</strong> ja digitaalisia ratkaisuja.
+      Intohimona puhdas koodi, toimivat käyttöliittymät ja teknologiat jotka oikeasti toimivat.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">Katso projektit</a>
+      <a href="#contact" class="btn-secondary">Ota yhteyttä</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="reveal">
+      <p class="section-label">01 — Info</p>
+      <h2 class="section-title">Kuka olen</h2>
+      <p class="about-text">
+        Olen Jesse Hirvonen, Tieto- ja viestintätekniikan insinööriopiskelija. Olen intohimoinen ohjelmistokehittäjä, joka rakastaa luoda digitaalisia kokemuksia ja ratkaista teknisiä haasteita.
+      </p>
+      <p class="about-text">
+        Erikoisalani on web-kehitys, mutta olen aina innokas oppimaan uusia teknologioita ja laajentamaan osaamistani. Uskon, että hyvä koodi on selkeää, ylläpidettävää ja ennen kaikkea toimivaa.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-chip">JavaScript / TypeScript</div>
+        <div class="skill-chip">C / C++</div>
+        <div class="skill-chip">React / React Native</div>
+        <div class="skill-chip">Node.js</div>
+        <div class="skill-chip">HTML & CSS</div>
+        <div class="skill-chip">Git & GitHub</div>
+        <div class="skill-chip">REST API:t</div>
+        <div class="skill-chip">Tietokannat</div>
+      </div>
+    </div>
+    <div class="about-visual reveal">
+      <div class="about-card">
+        <div class="terminal-line"><span class="prompt">~/jesse</span> <span class="cmd">$ whoami</span></div>
+        <div class="terminal-line"><span class="out">name:      </span><span class="val">Jesse Hirvonen</span></div>
+        <div class="terminal-line"><span class="out">role:      </span><span class="val">ICT Engineering Student</span></div>
+        <div class="terminal-line"><span class="out">location:  </span><span class="val">Suomi 🇫🇮</span></div>
+        <div class="terminal-line"><span class="out">focus:     </span><span class="val">Web & Software</span></div>
+        <div class="terminal-line"><span class="out">status:    </span><span class="val" style="color:var(--green)">available ●</span></div>
+        <br>
+        <div class="terminal-line"><span class="prompt">~/jesse</span> <span class="cmd">$ cat motto.txt</span></div>
+        <div class="terminal-line"><span class="out">"Kirjoita koodia jonka voit ylpeänä näyttää."</span></div>
+        <br>
+        <div class="terminal-line"><span class="prompt">~/jesse</span> <span class="cmd">$ █</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <p class="section-label">02 — Projektit</p>
+      <h2 class="section-title">Mitä olen rakentanut</h2>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Project 1 placeholder -->
+      <div class="project-card reveal">
+        <p class="project-num">001</p>
+        <h3 class="project-title">MadMooseMovies</h3>
+        <p class="project-desc">Elokuva-aiheinen verkkosovellus, joka on rakennettu Reactilla, Expressillä ja PostgreSQL:llä. Käyttäjät voivat rekisteröityä, kirjautua sisään, arvostella elokuvia, hallita suosikkejaan, liittyä ryhmiin sekä ladata profiilikuvia.</p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Figma</span>
+        </div>
+        <a href="https://github.com/Ryhma10/Websovellus-projekti-ryhma-10" class="project-link">Katso projekti</a>
+      </div>
+
+      <!-- Project 2 placeholder -->
+      <div class="project-card reveal">
+        <p class="project-num">002</p>
+        <h3 class="project-title">KauppaLappu</h3>
+        <p class="project-desc">Kauppalappu on suomenkielisille yksilöille, perheille, pariskunnille ja yhdessä ostaville suunnattu mobiilisovellus, joka helpottaa arjen ostosten suunnittelua ja tekemistä.</p>
+        <div class="project-tags">
+          <span class="tag">React Native</span>
+          <span class="tag">Firebase Firestore</span>
+          <span class="tag">Expo</span>
+          <span class="tag">Typescript</span>
+          <span class="tag">Figma</span>
+        </div>
+        <a href="https://github.com/Mobiilikehitysprojekti-group6/Mobiiliprojekti" class="project-link">Katso projekti</a>
+      </div>
+
+      <!-- Project 3 placeholder -->
+      <div class="project-card reveal">
+        <p class="project-num">003</p>
+        <h3 class="project-title">MarkkinointiMeklari</h3>
+        <p class="project-desc">MarkkinointiMeklari on yritys, joka tarjoaa digimarkkinointipalveluita yrityksille. Sivusto on rakennettu WordPressillä ja suunniteltu Figma-käyttöliittymällä.</p>
+        <div class="project-tags">
+          <span class="tag">Wordpress</span>
+          <span class="tag">Figma</span>
+        </div>
+        <a href="https://markkinointimeklari.fi/" class="project-link">Katso projekti</a>
+      </div>
+
+      <div class="project-card reveal">
+        <p class="project-num">004</p>
+        <h3 class="project-title">Sports Equipment Finland</h3>
+        <p class="project-desc">Sports Equipment Finland on yritys, joka tarjoaa laadukkaita ja turvallisia varustekuivaimia urheilujoukkueille, ammattikäyttöön ja erilaisille yhteisöille. Sivusto on rakennettu WordPressillä ja suunniteltu Figma-käyttöliittymällä.</p>
+        <div class="project-tags">
+          <span class="tag">Wordpress</span>
+          <span class="tag">Figma</span>
+        </div>
+        <a href="https://sef.fi/" class="project-link">Katso projekti</a>
+      </div>
+
+      <!-- Add more card -->
+      <div class="add-project-card reveal">
+        <div class="add-icon">+</div>
+        <p class="add-text">Lisää tulossa</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="reveal">
+      <p class="section-label">03 — Yhteys</p>
+      <h2 class="section-title">Ollaan yhteydessä</h2>
+      <p class="about-text" style="margin-bottom: 2rem;">
+        Onko sinulla projekti mielessä, tai haluatko vain jutella koodauksesta?
+        Lähetä viesti niin palataan asiaan pian.
+      </p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">@</div>
+          <div>
+            <div class="contact-label">Sähköposti</div>
+            <div class="contact-val"><a href="mailto:jessehirvonen17@gmail.com">jessehirvonen17@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">GH</div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-val"><a href="https://github.com/j3shi" target="_blank">github.com/j3shi</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">LI</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-val"><a href="https://www.linkedin.com/in/jesse-hirvonen17/" target="_blank">linkedin.com/in/jesse-hirvonen17</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form action="https://formspree.io/f/xaqvdnpw" method="POST" class="contact-form">
+        <div class="form-group">
+          <label>Nimi</label>
+          <input type="text" name="name" placeholder="Etunimi Sukunimi" required />
+        </div>
+        <div class="form-group">
+          <label>Sähköposti</label>
+          <input type="email" name="email" placeholder="nimi@esimerkki.fi" required />
+        </div>
+        <div class="form-group">
+          <label>Viesti</label>
+          <textarea name="message" placeholder="Kirjoita viestisi tähän..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: fit-content; font-family: var(--mono); font-size: 0.8rem; padding: 0.9rem 2rem; cursor: auto;">Lähetä viesti</button>
+      </form>  
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 <span class="accent">Jesse Hirvonen</span></p>
+    <p>Rakennettu rakkaudella & koodilla</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
