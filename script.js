@@ -5,38 +5,42 @@ const blob      = document.getElementById('glowBlob');
 
 const isMobile = () => window.innerWidth <= 768;
 
-document.addEventListener('mousemove', e => {
-  if (isMobile()) return;
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top  = e.clientY + 'px';
-  ring.style.left   = e.clientX + 'px';
-  ring.style.top    = e.clientY + 'px';
-  blob.style.left   = e.clientX + 'px';
-  blob.style.top    = e.clientY + 'px';
-});
+if (cursor && ring && blob) {
+  document.addEventListener('mousemove', e => {
+    if (isMobile()) return;
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+    ring.style.left   = e.clientX + 'px';
+    ring.style.top    = e.clientY + 'px';
+    blob.style.left   = e.clientX + 'px';
+    blob.style.top    = e.clientY + 'px';
+  });
 
-document.querySelectorAll('a, button, .project-card, .skill-chip').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
-    cursor.style.background = 'var(--accent2)';
-    ring.style.width = '48px';
-    ring.style.height = '48px';
+  document.querySelectorAll('a, button, .project-card, .skill-chip').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
+      cursor.style.background = 'var(--accent2)';
+      ring.style.width = '48px';
+      ring.style.height = '48px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+      cursor.style.background = 'var(--accent)';
+      ring.style.width = '36px';
+      ring.style.height = '36px';
+    });
   });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-    cursor.style.background = 'var(--accent)';
-    ring.style.width = '36px';
-    ring.style.height = '36px';
-  });
-});
+}
 
 // SCROLL PROGRESS
 const progressBar = document.getElementById('scrollProgress');
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const total    = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = (scrolled / total * 100) + '%';
-}, { passive: true });
+if (progressBar) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total    = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrolled / total * 100) + '%';
+  }, { passive: true });
+}
 
 // NAV SHRINK + ACTIVE LINK
 const navbar   = document.getElementById('navbar');
@@ -45,7 +49,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
   // Shrink nav
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 60);
 
   // Active section highlight
   let current = '';
@@ -61,19 +65,21 @@ window.addEventListener('scroll', () => {
 const hamburger = document.getElementById('hamburger');
 const navList   = document.getElementById('navLinks');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navList.classList.toggle('open');
-  document.body.style.overflow = navList.classList.contains('open') ? 'hidden' : '';
-});
-
-navList.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navList.classList.remove('open');
-    document.body.style.overflow = '';
+if (hamburger && navList) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navList.classList.toggle('open');
+    document.body.style.overflow = navList.classList.contains('open') ? 'hidden' : '';
   });
-});
+
+  navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navList.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+}
 
 // SCROLL REVEAL with stagger
 const revealObserver = new IntersectionObserver(entries => {
